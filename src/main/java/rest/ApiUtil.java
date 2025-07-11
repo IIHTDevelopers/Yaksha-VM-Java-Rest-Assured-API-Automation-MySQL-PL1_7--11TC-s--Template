@@ -392,46 +392,6 @@ public class ApiUtil {
 	}
 
 	/**
-	 * @Test10 - This method sends a PUT request to update a custom field
-	 *         configuration in the system.
-	 * 
-	 * @description This method constructs and executes a PUT API call to the
-	 *              specified endpoint using a session cookie ("orangehrm") for
-	 *              authentication. It accepts a request body as a JSON-formatted
-	 *              string containing custom field details. The response is parsed
-	 *              to extract the HTTP status and relevant custom field attributes
-	 *              from the "data" object, including "id", "fieldName",
-	 *              "fieldType", "extraData", and "screen". These values are
-	 *              collected and returned in a CustomResponse object for validation
-	 *              or further processing.
-	 *
-	 * @param endpoint    - The specific API endpoint to hit (relative to the base
-	 *                    URL).
-	 * @param cookieValue - The session cookie value to authenticate the request.
-	 * @param body        - The request body as a JSON-formatted String containing
-	 *                    custom field configuration.
-	 *
-	 * @return CustomResponse - A custom response object containing the full HTTP
-	 *         response, status code, status line, and lists of extracted custom
-	 *         field attributes from the response "data" object.
-	 */
-	public CustomResponse PutCustomField(String endpoint, String cookieValue, String body) {
-
-		Response response = null;
-
-		int statusCode = 0;
-		String status = null;
-
-		List<Object> id = null;
-		List<Object> fieldName = null;
-		List<Object> fieldType = null;
-		List<Object> extraData = null;
-		List<Object> screen = null;
-
-		return new CustomResponse(response, statusCode, status, id, fieldName, fieldType, extraData, screen);
-	}
-
-	/**
 	 * @Test9 - This method sends a POST request to create a new custom field
 	 *        configuration in the system.
 	 * 
@@ -456,6 +416,46 @@ public class ApiUtil {
 	 *         attributes extracted from the response "data" object.
 	 */
 	public CustomResponse PostCustomField(String endpoint, String cookieValue, String body) {
+
+		Response response = null;
+
+		int statusCode = 0;
+		String status = null;
+
+		List<Object> id = null;
+		List<Object> fieldName = null;
+		List<Object> fieldType = null;
+		List<Object> extraData = null;
+		List<Object> screen = null;
+
+		return new CustomResponse(response, statusCode, status, id, fieldName, fieldType, extraData, screen);
+	}
+
+	/**
+	 * @Test10 - This method sends a PUT request to update a custom field
+	 *         configuration in the system.
+	 * 
+	 * @description This method constructs and executes a PUT API call to the
+	 *              specified endpoint using a session cookie ("orangehrm") for
+	 *              authentication. It accepts a request body as a JSON-formatted
+	 *              string containing custom field details. The response is parsed
+	 *              to extract the HTTP status and relevant custom field attributes
+	 *              from the "data" object, including "id", "fieldName",
+	 *              "fieldType", "extraData", and "screen". These values are
+	 *              collected and returned in a CustomResponse object for validation
+	 *              or further processing.
+	 *
+	 * @param endpoint    - The specific API endpoint to hit (relative to the base
+	 *                    URL).
+	 * @param cookieValue - The session cookie value to authenticate the request.
+	 * @param body        - The request body as a JSON-formatted String containing
+	 *                    custom field configuration.
+	 *
+	 * @return CustomResponse - A custom response object containing the full HTTP
+	 *         response, status code, status line, and lists of extracted custom
+	 *         field attributes from the response "data" object.
+	 */
+	public CustomResponse PutCustomField(String endpoint, String cookieValue, String body) {
 
 		Response response = null;
 
